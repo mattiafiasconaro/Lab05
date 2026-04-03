@@ -161,7 +161,8 @@ class Controller:
         self._view.update_page()
 
 
-        for i in
+
+
 
 
 

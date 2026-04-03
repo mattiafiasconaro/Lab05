@@ -56,7 +56,7 @@ class View(ft.UserControl):
                                                   on_click=self._controller.signUp,
                                             )
 
-        row3=ft.Row(controls=[self.btnCercaStudente,self.btnCercaCorsi,self.btnIscrivi])
+        row3=ft.Row(controls=[self.btnCercaStudente,self.btnCercaCorsi,self.btnIscrivi],alignment='CENTER')
 
 
 

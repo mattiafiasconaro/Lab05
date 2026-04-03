@@ -68,18 +68,14 @@ class studente_DAO():
         return res
 
     @staticmethod
-    def getCercaCorsiIscritto():
+    def getIscriviti(matricola, codins):
         cnx = DBConnect.get_connection()
         cursor = cnx.cursor(dictionary=True)
 
-        query = """"""
-        cursor.execute(query)
-
-        res = []
-
-        for row in cursor:
-            res.append(row)
+        query = """INSERT INTO iscrizione (matricola, codins) VALUES (%s, %s)"""
+        cursor.execute(query, (matricola, codins))
+        cnx.commit()
 
         cursor.close()
         cnx.close()
-        return res
+
